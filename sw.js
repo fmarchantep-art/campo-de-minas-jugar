@@ -1,5 +1,5 @@
 const prefix='campo013-'+self.registration.scope+'-';
-const version=prefix+'03938de68fe3e3ce',shell=["./","manifest.webmanifest","icono-192.png","icono-512.png","icono-180.png","audio/bruma-ronda-5.wav","audio/bruma.wav","audio/lose.wav","audio/umbra-ronda-5.wav","audio/umbra.wav","audio/win.wav"];
+const version=prefix+'b39ab577a532665b',shell=["./","manifest.webmanifest","icono-192.png","icono-512.png","icono-180.png","audio/bruma-ronda-5.wav","audio/bruma.wav","audio/lose.wav","audio/umbra-ronda-5.wav","audio/umbra.wav","audio/win.wav"];
 const url=name=>new URL(name,self.registration.scope).href;
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(version).then(cache=>cache.addAll(shell.map(name=>new Request(url(name),{cache:'reload'})))));
